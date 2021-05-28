@@ -1,0 +1,171 @@
+/* 
+
+	CONTENTS
+
+	1. Root
+	2. CSS Reset
+
+	3. Body styles
+
+	4. Styles
+
+*/
+
+/* ----- ----- ----- ----- */
+
+/* 1. Root */
+
+:root {
+	--gray-one: #fbfbfb;
+	--gray-two: #e3e3e3;
+	--gray-three: #b8b8b8;
+	--gray-four: #4a4a4a;
+}
+
+/* 2. CSS Reset */
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	background: none;
+	box-sizing: border-box;
+}
+
+/* 3. Body Styles */
+
+body {
+	font-size: 100%;
+	font-family: "Poppins", sans-serif;
+	line-height: 1;
+}
+
+/* 4. Styles */
+
+#form {
+	width: 90%;
+	margin: 0 auto;
+	padding-top: 80px;
+}
+
+h1 {
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: var(--gray-four);
+}
+
+#form-title {
+	margin-bottom: 2.5rem;
+}
+
+.input-container {
+	position: relative;
+}
+
+/* Labels */
+
+.input-label {
+	margin-left: 0.75rem;
+
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+
+	font-size: 0.875rem;
+	font-weight: 400;
+	color: var(--gray-three);
+
+	transition: all 100ms ease-in-out;
+	pointer-events: none;
+}
+
+/* Text Inputs */
+
+input[type="text"] {
+	width: min(400px, 100%);
+	padding: 1.25rem 0.75rem 0.2rem 0.75rem;
+
+	font-size: 1rem;
+	font-family: inherit;
+	font-weight: 400;
+	color: var(--gray-four);
+
+	background-color: var(--gray-one);
+	border: 1px solid var(--gray-two);
+	border-radius: 4px;
+
+	cursor: pointer;
+}
+
+input[type="text"]:focus {
+	border-color: var(--gray-four);
+}
+
+input[type="text"]:focus + .input-label,
+input[type="text"]:valid + .input-label {
+	font-size: 0.625rem;
+	top: 25%;
+}
+
+/* Input Margin Helper Class */
+
+.middle-input {
+	margin: 20px 0 25px 0;
+}
+
+/* Submit Button */
+
+#submit-btn {
+	padding: 0.5rem 2rem;
+
+	font-size: 1rem;
+	font-family: inherit;
+	font-weight: 500;
+	color: var(--gray-four);
+
+	border: 1px solid var(--gray-two);
+	border-radius: 4px;
+	box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.075);
+}
+
+#submit-btn:hover,
+#submit-btn:focus {
+	border-color: var(--gray-four);
+}
+
+#submit-btn:active {
+	background-color: var(--gray-four);
+	color: white;
+}
+
+/* Media Queries */
+
+@media (min-width: 436px) {
+
+	h1 {
+		font-size: 1.25rem;
+	}
+
+}
+
+@media (min-width: 800px) {
+
+	h1 {
+		font-size: 1.625rem;
+	}
+
+	#submit-btn {
+		padding: 0.5rem 2.5rem;
+	}
+
+}
+
+@media (min-width: 1400px) {
+
+	h1 {
+		font-size: 2.25rem;
+	}
+
+}
